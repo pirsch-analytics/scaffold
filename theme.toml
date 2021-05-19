@@ -1,0 +1,12 @@
+name = "scaff"
+license = "MIT"
+licenselink = "https://github.com/pirsch-analytics/scaff/blob/master/LICENSE"
+description = "Our Hugo template for the Pirsch blog. See https://pirsch.io/blog."
+homepage = "https://docs.pirsch.io/"
+tags = ["blog"]
+features = ["search"]
+min_version = "0.77.0"
+
+[author]
+  name = "Emvi Software GmbH"
+  homepage = "https://pirsch.io/"

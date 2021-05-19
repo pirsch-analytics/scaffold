@@ -1,0 +1,11 @@
+<header>
+    <a href="/" class="logo">{{.Site.Params.title}}</a>
+    <ul>
+        {{range .Site.Menus.main}}
+            <li>
+                {{.Pre}}
+                <a href="{{.URL}}" target="_blank">{{.Name}}</a>
+            </li>
+        {{end}}
+    </ul>
+</header>

@@ -1,0 +1,295 @@
+pre {
+    padding: 0;
+
+    code {
+        padding: 0 !important;
+        color: white;
+        background: none;
+
+        @media only screen and (max-width: 512px) {
+            font-size: 14px;
+        }
+    }
+}
+
+code {
+    font-family: "DM Mono", monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background: var(--background-input);
+    border-radius: 6px;
+}
+
+/* Background */
+div.chroma {
+    --error: var(--red);
+    --operator: var(--red);
+    --keyword: var(--orange);
+    --variables: var(--blue);
+    --attribute: var(--yellow);
+    --o: var(--text-secondary);
+    --p: var(--text-secondary);
+
+    padding: 24px 0;
+    background-color: var(--background-secondary);
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+/* Error */
+.chroma .err {
+    color: var(--error);
+}
+
+/* LineTableTD */
+.chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* LineTable */
+.chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    display: block;
+
+    td:first-of-type {
+        border-right: 1px solid var(--text-secondary);
+        padding-left: 16px;
+        user-select: none;
+    }
+
+    td:nth-of-type(2){
+        padding: 0 24px 0 15px;
+    }
+}
+
+/* LineHighlight */
+.chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: var(--background-primary);
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+    margin-right: 3px;
+    padding: 0 7px;
+    color: var(--text-secondary);
+}
+
+/* LineNumbers */
+.chroma .ln {
+    color: var(--text-secondary);
+}
+
+/* Keyword */
+.chroma .k,
+.chroma .keyword {
+    color: var(--blue);
+}
+
+/* KeywordConstant */
+.chroma .kc {
+    color: var(--blue);
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+    color: var(--green);
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+    color: white;
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+    color: white;
+}
+
+/* KeywordReserved */
+.chroma .kr {
+    color: var(--orange);
+}
+
+/* KeywordType */
+.chroma .kt {
+    color: white;
+}
+
+/* NameAttribute */
+.chroma .na,
+.chroma .attr-value {
+    color: var(--yellow);
+}
+
+/* NameTag */
+.chroma .nt,
+.chroma .tag {
+    color: var(--variables);
+}
+
+/* LiteralDate */
+.chroma .ld {
+    color: var(--yellow);
+}
+
+/* LiteralString */
+.chroma .s,
+.chroma .string {
+    color: var(--green);
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+    color: var(--red);
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+    color: var(--text-secondary);
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+    color: var(--red);
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+    color: var(--red);
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+    color: var(--red);
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+    color: var(--blue);
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+    color: var(--blue);
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+    color: var(--text-secondary);
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+    color: var(--blue);
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+    color: var(--blue);
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+    color: var(--red);
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+    color: var(--red);
+}
+
+/* LiteralNumber */
+.chroma .m {
+    color: var(--red);
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+    color: var(--red);
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+    color: var(--red);
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+    color: var(--red);
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+    color: var(--red);
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+    color: var(--red);
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+    color: var(--red);
+}
+
+/* Comment */
+.chroma .c {
+    color: var(--text-secondary);
+}
+
+/* CommentHashbang */
+.chroma .ch {
+    color: var(--text-secondary);
+}
+
+/* CommentMultiline */
+.chroma .cm {
+    color: var(--text-secondary);
+}
+
+/* CommentSingle */
+.chroma .c1 {
+    color: var(--text-secondary);
+}
+
+/* CommentSpecial */
+.chroma .cs {
+    color: var(--text-secondary);
+}
+
+/* CommentPreproc */
+.chroma .cp {
+    color: var(--red);
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+    color: var(--blue);
+}
+
+/* GenericUnderline */
+.chroma .gl {
+    text-decoration: underline;
+}
+
+/* Operator */
+.chroma .o,
+.chroma .operator {
+    color: var(--o);
+}
+
+.chroma .p,
+.chroma .parameter {
+    color: var(--p);
+}
