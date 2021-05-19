@@ -1,4 +1,4 @@
-# Seeker
+# Scaff
 
 Our Hugo template for the Pirsch blog. See https://pirsch.io/blog.
 
