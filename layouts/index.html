@@ -1,0 +1,13 @@
+{{define "main"}}
+    <h1>{{.Title}}</h1>
+    <small>{{.Date.Format "02. Jan, 2006"}}</small>
+    {{.Content}}
+    {{range .Site.RegularPages}}
+        <a href="{{.RelPermalink}}" class="card">
+            <h3>{{.Title}}</h3>
+            {{if .Description}}
+                <small>{{.Description}}</small>
+            {{end}}
+        </a>
+    {{end}}
+{{end}}
