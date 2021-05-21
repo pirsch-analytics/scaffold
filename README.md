@@ -1,4 +1,4 @@
-# Scaff
+# Scaffold
 
 Our Hugo template for the Pirsch blog. See https://pirsch.io/blog.
 
