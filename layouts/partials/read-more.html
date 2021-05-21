@@ -1,0 +1,18 @@
+<div style="display: flex;justify-content: space-between;">
+    {{with .Site.RegularPages.ByDate.Reverse.Prev .}}
+        <div>
+            Previous post:
+            <a href="{{.RelPermalink}}">
+                <h2>{{.Title}}</h2>
+            </a>
+        </div>
+    {{end}}
+    {{with .Site.RegularPages.ByDate.Reverse.Next .}}
+        <div>
+            Next post:
+            <a href="{{.RelPermalink}}">
+                <h2>{{.Title}}</h2>
+            </a>
+        </div>
+    {{end}}
+</div>

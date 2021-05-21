@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const imgs = document.getElementsByTagName("img");
+    const zoom = document.getElementsByClassName("img-zoom");
 
-    if(imgs) {
-        for(let i = 0; i < imgs.length; i++) {
-            imgs[i].addEventListener("click", () => {
-                showOverlay(imgs[i]);
-            });
+    if(zoom) {
+        for(let i = 0; i < zoom.length; i++) {
+            const imgs = zoom[i].getElementsByTagName("img");
+
+            if(imgs) {
+                for(let i = 0; i < imgs.length; i++) {
+                    imgs[i].addEventListener("click", () => {
+                        showOverlay(imgs[i]);
+                    });
+                }
+            }
         }
     }
 });

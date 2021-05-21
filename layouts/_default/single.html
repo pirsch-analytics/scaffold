@@ -1,5 +1,10 @@
 {{define "main"}}
+    <a href="{{.Site.BaseURL}}">&lt;- All Posts</a>
     <h1>{{.Title}}</h1>
-    <small>{{.Date.Format "02. Jan, 2006"}}</small>
-    {{.Content}}
+    <small>{{.Date.Format "02. Jan, 2006"}} written by {{.Params.author}}</small>
+    <div class="img-zoom">
+        {{partial "thumbnail" (dict "context" . "size" "800x400")}}
+        {{.Content}}
+    </div>
+    {{partial "read-more" .}}
 {{end}}

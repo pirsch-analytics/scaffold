@@ -1,0 +1,8 @@
+{{if .context.Params.image}}
+    {{$path := print "images/" (path.Base .context.Params.image)}}
+    {{$img := .context.Resources.GetMatch $path}}
+    {{if $img}}
+        {{$thumbnail := $img.Fit .size}}
+        <img src="{{$thumbnail.RelPermalink}}" alt="{{.context.Title}}" />
+    {{end}}
+{{end}}

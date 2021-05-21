@@ -1,21 +1,11 @@
 {{define "main"}}
     <h1>{{.Title}}</h1>
     {{.Content}}
-
     {{range $page := .Site.RegularPages.ByDate.Reverse}}
         <a href="{{.RelPermalink}}">
-            <small>{{.Date.Format "02. Jan, 2006"}}</small>
             <h2>{{.Title}}</h2>
-
-            {{if $page.Params.image}}
-                {{$path := print "images/" (path.Base $page.Params.image)}}
-                {{$img := $page.Resources.GetMatch $path}}
-                {{if $img}}
-                    {{$thumbnail := $img.Fit "800x400"}}
-                    <img src="{{$thumbnail.RelPermalink}}" alt="{{.Title}}" />
-                {{end}}
-            {{end}}
-
+            <small>{{.Date.Format "02. Jan, 2006"}}</small>
+            {{partial "thumbnail" (dict "context" . "size" "400x200")}}
             {{if .Summary}}
                 <p>{{.Summary}}</p>
             {{end}}
