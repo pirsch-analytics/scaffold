@@ -1,6 +1,6 @@
-name = "scaff"
+name = "scaffold"
 license = "MIT"
-licenselink = "https://github.com/pirsch-analytics/scaff/blob/master/LICENSE"
+licenselink = "https://github.com/pirsch-analytics/scaffold/blob/master/LICENSE"
 description = "Our Hugo template for the Pirsch blog. See https://pirsch.io/blog."
 homepage = "https://docs.pirsch.io/"
 tags = ["blog"]

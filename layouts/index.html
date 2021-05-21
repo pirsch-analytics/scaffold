@@ -1,12 +1,23 @@
 {{define "main"}}
     <h1>{{.Title}}</h1>
-    <small>{{.Date.Format "02. Jan, 2006"}}</small>
     {{.Content}}
-    {{range .Site.RegularPages}}
-        <a href="{{.RelPermalink}}" class="card">
-            <h3>{{.Title}}</h3>
-            {{if .Description}}
-                <small>{{.Description}}</small>
+
+    {{range $page := .Site.RegularPages.ByDate.Reverse}}
+        <a href="{{.RelPermalink}}">
+            <small>{{.Date.Format "02. Jan, 2006"}}</small>
+            <h2>{{.Title}}</h2>
+
+            {{if $page.Params.image}}
+                {{$path := print "images/" (path.Base $page.Params.image)}}
+                {{$img := $page.Resources.GetMatch $path}}
+                {{if $img}}
+                    {{$thumbnail := $img.Fit "800x400"}}
+                    <img src="{{$thumbnail.RelPermalink}}" alt="{{.Title}}" />
+                {{end}}
+            {{end}}
+
+            {{if .Summary}}
+                <p>{{.Summary}}</p>
             {{end}}
         </a>
     {{end}}
