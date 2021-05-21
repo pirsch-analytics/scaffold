@@ -1,0 +1,21 @@
+{{if gt .TotalPages 1}}
+    {{$activePage := .PageNumber}}
+
+    <ul>
+        {{with .Prev}}
+            <li>
+                <a href="{{.URL}}">&lt;</a>
+            </li>
+        {{end}}
+        {{range .Pagers}}
+            <li>
+                <a href="{{.URL}}" {{if eq .PageNumber $activePage}}style="font-weight: bold;"{{end}}>{{.PageNumber}}</a>
+            </li>
+        {{end}}
+        {{with .Next}}
+            <li>
+                <a href="{{.URL}}">&gt;</a>
+            </li>
+        {{end}}
+    </ul>
+{{end}}

@@ -1,7 +1,8 @@
 {{define "main"}}
     <h1>{{.Title}}</h1>
     {{.Content}}
-    {{range $page := .Site.RegularPages.ByDate.Reverse}}
+    {{$paginator := .Paginate .Site.RegularPages.ByDate.Reverse}}
+    {{range $page := $paginator.Pages}}
         <a href="{{.RelPermalink}}">
             <h2>{{.Title}}</h2>
             <small>{{.Date.Format "02. Jan, 2006"}}</small>
@@ -11,4 +12,5 @@
             {{end}}
         </a>
     {{end}}
+    {{partial "pagination" $paginator}}
 {{end}}
