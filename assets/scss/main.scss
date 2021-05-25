@@ -40,6 +40,8 @@ html {
         --text-secondary-hover: var(--grey-400);
         --background-primary: var(--beige);
         --background-secondary: var(--grey-900);
+        --background-tertiary: white;
+        --background-tertiary-hover: var(--grey-200);
         --background-input: white;
         --border-primary: var(--grey-300);
         --box-shadow: 0px 4px 16px rgba(0,0,0,.2);
@@ -56,6 +58,8 @@ html {
         --text-secondary-hover: var(--grey-500);
         --background-primary: var(--grey-900);
         --background-secondary: var(--grey-800);
+        --background-tertiary: var(--grey-800);
+        --background-tertiary-hover: var(--grey-700);
         --background-input: var(--grey-800);
         --border-primary: var(--grey-600);
         --border-secondary: var(--grey-600);
@@ -497,12 +501,12 @@ section.layout {
             display: block;
             margin: 0 0 32px;
             padding: 24px 24px 20px;
-            background: var(--background-secondary);
+            background: var(--background-tertiary);
             border-radius: 12px;
             transition: background-color .1s ease;
 
             &:hover, &:focus {
-                background: var(--grey-700);
+                background: var(--background-tertiary-hover);
             }
 
             img {
@@ -513,7 +517,6 @@ section.layout {
             h2 {
                 margin: 12px 0 0;
                 padding: 0 0 8px;
-                color: white;
             }
         
             p, small {
@@ -535,6 +538,19 @@ section.layout {
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+                }
+            }
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+
+            li {
+                width: 24px;
+
+                a {
+                    font-weight: 400;
                 }
             }
         }
