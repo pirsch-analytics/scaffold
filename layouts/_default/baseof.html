@@ -2,13 +2,15 @@
 <html lang="{{.Site.Language.Lang}}" class="theme-light">
 {{partial "head" .}}
 <body>
-    {{partial "header" .}}
-    <section class="layout">
-        <div class="content">
-            {{block "main" .}}{{end}}
-        </div>
-    </section>
-    {{partial "button" .}}
-    {{partial "footer" .}}
+    <main>
+        {{partial "header" .}}
+        <section class="layout">
+            <div class="content">
+                {{block "main" .}}{{end}}
+            </div>
+        </section>
+        {{partial "button" .}}
+        {{partial "footer" .}}
+    </main>
 </body>
 </html>

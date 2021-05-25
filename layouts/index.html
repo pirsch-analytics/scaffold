@@ -1,15 +1,18 @@
 {{define "main"}}
     <h1>{{.Title}}</h1>
     {{.Content}}
+    {{partial "search" .}}
     {{$paginator := .Paginate .Site.RegularPages.ByDate.Reverse}}
     {{range $page := $paginator.Pages}}
-        <a href="{{.RelPermalink}}">
-            <h2>{{.Title}}</h2>
-            <small>{{.Date.Format "02. Jan, 2006"}}</small>
+        <a class="card" href="{{.RelPermalink}}">
             {{partial "thumbnail" (dict "context" . "size" "400x200")}}
-            {{if .Summary}}
-                <p>{{.Summary}}</p>
-            {{end}}
+            <h2>{{.Title}}</h2>
+            <small>
+                {{.Date.Format "02. Jan, 2006"}}
+                {{if .Summary}}
+                    - {{.Summary}}
+                {{end}}
+            </small>
         </a>
     {{end}}
     {{partial "pagination" $paginator}}

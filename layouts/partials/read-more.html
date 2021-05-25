@@ -1,18 +1,14 @@
-<div style="display: flex;justify-content: space-between;">
+<div class="read-more">
     {{with .Site.RegularPages.ByDate.Reverse.Prev .}}
-        <div>
-            Previous post:
-            <a href="{{.RelPermalink}}">
-                <h2>{{.Title}}</h2>
-            </a>
-        </div>
+        <a href="{{.RelPermalink}}" class="card">
+            <small>Previous Post</small>
+            <h2>{{.Title}}</h2>
+        </a>
     {{end}}
     {{with .Site.RegularPages.ByDate.Reverse.Next .}}
-        <div>
-            Next post:
-            <a href="{{.RelPermalink}}">
-                <h2>{{.Title}}</h2>
-            </a>
-        </div>
+        <a href="{{.RelPermalink}}" class="card">
+            <small>Next Post</small>
+            <h2>{{.Title}}</h2>
+        </a>
     {{end}}
 </div>
