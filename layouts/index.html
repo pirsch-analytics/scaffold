@@ -5,7 +5,7 @@
     {{$paginator := .Paginate .Site.RegularPages.ByDate.Reverse}}
     {{range $page := $paginator.Pages}}
         <a class="card" href="{{.RelPermalink}}">
-            {{partial "thumbnail" (dict "context" . "size" "400x200")}}
+            {{partial "thumbnail" (dict "context" . "size" "768x432")}}
             <h2>{{.Title}}</h2>
             <small>
                 {{.Date.Format "02. Jan, 2006"}}

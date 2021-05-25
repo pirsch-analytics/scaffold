@@ -3,7 +3,7 @@
     <h1>{{.Title}}</h1>
     <small>{{.Date.Format "02. Jan, 2006"}} by {{.Params.author}}</small>
     <div class="img-zoom">
-        {{partial "thumbnail" (dict "context" . "size" "800x400")}}
+        {{partial "thumbnail" (dict "context" . "size" "768x432")}}
         {{.Content}}
     </div>
     {{partial "read-more" .}}

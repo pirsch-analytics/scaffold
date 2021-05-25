@@ -1,9 +1,10 @@
 <footer>
     {{if .Site.Params.url}}
-    <a href="{{.Site.Params.url}}" target="_blank">{{.Site.Params.copyright}}</a>
+        <a href="{{.Site.Params.url}}" target="_blank">{{.Site.Params.copyright}}</a>
     {{else}}
         {{.Site.Params.copyright}}
     {{end}}
+    
     <ul>
         {{range .Site.Menus.footer}}
             <li>
