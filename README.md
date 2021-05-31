@@ -75,6 +75,25 @@ mediaType = "application/json"
 home = ["HTML", "RSS", "SearchIndex"] # "SearchIndex" needs to be added, HTML and RSS are the default
 ```
 
+### Authors
+
+To add authors, create a directory for each in the `content/authors/<name>/_index.md` directory and enable it by adding the `author` taxonomy in the `config.toml`.
+
+```toml
+[taxonomies]
+	author = "authors"
+```
+
+You can add the name, twitter handle (without the @), and a picture.
+
+```toml
+---
+name: "Author Name"
+picture: "path/to/picture.png"
+twitter: "handle"
+---
+```
+
 ## Web Analytics
 
 You can use [Pirsch](https://pirsch.io/) for web analytics be providing the identification code in the `config.toml`:
