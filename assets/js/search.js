@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchDebounced = debounce(search, 200);
     let currentInput = "";
 
+    if(!input) {
+        return;
+    }
+
     input.addEventListener("keydown", e => {
         if(e.key === "ArrowDown") {
             e.preventDefault();

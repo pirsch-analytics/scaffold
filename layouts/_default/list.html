@@ -1,9 +1,9 @@
 {{define "main"}}
+    <a href="{{.Site.BaseURL}}" style="align-self: flex-start; margin-bottom: 6px;">&lt; All Posts</a>
     <h1>{{.Title}}</h1>
+    <small>{{.Date.Format "02. Jan, 2006"}}</small>
     {{.Content}}
-    {{partial "search" .}}
-    {{$paginator := .Paginate .Site.RegularPages.ByDate.Reverse}}
-    {{range $paginator.Pages}}
+    {{range .Pages}}
         <a class="card" href="{{.RelPermalink}}">
             {{partial "thumbnail" (dict "context" . "size" "768x432")}}
             <h2>{{.Title}}</h2>
@@ -15,5 +15,4 @@
             </small>
         </a>
     {{end}}
-    {{partial "pagination" $paginator}}
 {{end}}
