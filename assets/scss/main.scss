@@ -295,6 +295,7 @@ header {
                 font-size: 16px;
                 line-height: 16px;
                 color: var(--text-primary);
+                white-space: nowrap;
 
                 &:hover, &:focus {
                     color: var(--text-primary-hover);
@@ -427,7 +428,7 @@ section.layout {
         flex: 1;
 
         h1 {
-            margin-bottom: 32px;
+            margin-bottom: 48px;
 
             & + p {
                 max-width: 512px;
@@ -497,7 +498,55 @@ section.layout {
             padding: 0 4px;
         }
 
+        .all-posts {
+            align-self: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 24px;
+
+            & + div {
+                width: 100%;
+            }
+
+            .author {
+                display: flex;
+                align-items: center;
+                flex: 1;
+    
+                img {
+                    height: 48px;
+                    width: 48px;
+                    min-width: 48px;
+                    margin: 0;
+                    border-radius: 50%;
+                    cursor: default;
+                }
+    
+                svg {
+                    margin-right: 6px;
+                    fill: var(--text-primary);
+                }
+    
+                .name {
+                    margin-left: 12px;
+    
+                    small {
+                        padding-bottom: 4px;
+                        color: var(--text-primary);
+                        font-weight: 500;
+                    }
+                }
+    
+            }
+        }
+
         .card {
+            width: 100%;
             display: block;
             margin: 0 0 32px;
             padding: 24px 24px 20px;
@@ -507,6 +556,10 @@ section.layout {
 
             &:hover, &:focus {
                 background: var(--background-tertiary-hover);
+
+                h2 {
+                    color: var(--text-primary);
+                }
             }
 
             img {
@@ -564,6 +617,7 @@ section.layout {
 
             h1 {
                 margin-bottom: 24px;
+                text-align: left;
 
                 & + p {
                     text-align: left;
@@ -572,6 +626,10 @@ section.layout {
                 & + small {
                     margin-top: -12px;
                 }
+            }
+
+            .all-posts {
+                margin-bottom: 24px;
             }
         }
     }
@@ -602,6 +660,7 @@ section.layout {
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    z-index: 10;
     transition: background-color .1s ease;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
