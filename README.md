@@ -84,13 +84,14 @@ To add authors, create a directory for each in the `content/authors/<name>/_inde
 	author = "authors"
 ```
 
-You can add the name, twitter handle (without the @), and a picture.
+You can add the name, Twitter handle (without the @), GitHub, and a picture (`static/authors/<name>/<picture>`).
 
 ```toml
 ---
 name: "Author Name"
-picture: "path/to/picture.png"
+picture: "picture.png"
 twitter: "handle"
+github: "username"
 ---
 ```
 
