@@ -27,15 +27,19 @@ Content goes here...
 
 To use a different favicon, place the `favicon.png` inside the `static` directory of your site.
 
-### Texts
+### Texts and Variables
 
-To change the title, copyright texts, and copyright URL, set these parameters inside your `config.toml`:
+To change the title, copyright texts, copyright URL, and more, set these parameters inside your `config.toml`:
 
 ```toml
 [params]
     title = "Title"
     copyright = "Copyright"
     url = "https://example.com/"
+    titleColor = "#ffffff"
+    themeColor = "#000000"
+    twitter = "@PirschAnalytics"
+    twitterCard = "product"
 ```
 
 ### Navigation
@@ -94,6 +98,10 @@ twitter: "handle"
 github: "username"
 ---
 ```
+
+### Twitter Card
+
+A Twitter card can be placed at `static/twitter-card.png`.
 
 ## Web Analytics
 
