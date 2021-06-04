@@ -142,7 +142,7 @@ strong {
 img {
     max-width: 100%;
     display: block;
-    margin: 32px 0;
+    margin: 32px auto;
     border-radius: 6px;
     cursor: zoom-in;
 }
@@ -488,10 +488,6 @@ section.layout {
             margin: 8px 0;
             padding-left: 16px;
             list-style-type: disc;
-        }
-
-        img {
-            width: 100%;
         }
 
         code {

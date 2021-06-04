@@ -3,6 +3,6 @@
     {{$img := .context.Resources.GetMatch $path}}
     {{if $img}}
         {{$thumbnail := $img.Fit .size}}
-        <img src="{{$thumbnail.RelPermalink}}" alt="{{.context.Title}}" />
+        <img src="{{$thumbnail.RelPermalink}}" alt="{{.context.Title}}" style="width: 100%;" />
     {{end}}
 {{end}}
