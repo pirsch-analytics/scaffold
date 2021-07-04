@@ -3,7 +3,7 @@ pre {
 
     code {
         padding: 0 !important;
-        color: white;
+        color: var(--text-secondary);
         background: none;
 
         @media only screen and (max-width: 512px) {
