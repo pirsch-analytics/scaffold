@@ -39,4 +39,9 @@
         {{.Content}}
     </div>
     {{partial "read-more" .}}
+    {{- $article := resources.Get "js/article.js" -}}
+    <script type="text/javascript" src="{{$article.RelPermalink}}"
+        id="article"
+        data-title="{{.Title}}"
+        data-words="{{countwords .Content}}"></script>
 {{end}}
