@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const title = script.getAttribute("data-title");
 
         if(!localStorage.getItem(title)) {
-            const readingTimeSeconds = Math.floor(parseInt(script.getAttribute("data-words"))/220)*60;
+            const minReadingTimeSeconds = Math.floor(parseInt(script.getAttribute("data-words"))/220)*60;
             const start = new Date().getTime();
             let done = false;
             
@@ -13,9 +13,14 @@ window.addEventListener("DOMContentLoaded", () => {
                 if(!done && getScrollPercent() > 85) {
                     const readSeconds = Math.floor((new Date().getTime()-start)/1000);
 
-                    if(readSeconds >= readingTimeSeconds) {
+                    if(readSeconds >= minReadingTimeSeconds) {
                         done = true;
                         localStorage.setItem(title, "read");
+
+                        if(readSeconds > minReadingTimeSeconds * 2) {
+                            readSeconds = minReadingTimeSeconds * 2;
+                        }
+
                         pirsch("Read article", {
                             duration: readSeconds,
                             meta: {
